@@ -1,5 +1,6 @@
 import express from "express"
 import authRoutes from "../src/modules/auth/auth.routes.ts"
+import gamesRoutes from "./modules/games/games.routes.ts"
 import { errorMiddleware } from "./middlewares/error.middleware.ts"
 
 export const app = express()
@@ -18,6 +19,8 @@ app.get("/health", (_req, res) => {
 // Auth routes
 app.use("/auth", authRoutes)
 
+// games routes
+app.use("/games", gamesRoutes)
 
 // Error Handler
 app.use(errorMiddleware);
