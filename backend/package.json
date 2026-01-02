@@ -1,8 +1,11 @@
 {
   "name": "backend",
-  "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun src/server.ts",
+    "start": "bun src/server.ts"
+  },
   "devDependencies": {
     "@types/bcrypt": "^6.0.0",
     "@types/bun": "latest",

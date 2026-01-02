@@ -6,6 +6,9 @@ export const pool = new Pool({
   ssl: {
     rejectUnauthorized: false,
   },
+  max: 1,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 10000
 })
 
 pool.on("connect", () => {
